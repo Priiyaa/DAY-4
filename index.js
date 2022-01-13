@@ -15,10 +15,24 @@ function encrypt(){
     let pinput= document.getElementById('plaininput1').value;
     let solved = ''
     let shiftinput= parseInt(document.getElementById('shiftinput').value)
+   /* if(shiftinput>=26){
+        shiftinput=shiftinput % 26
+    }*/
     for(var i=0; i<pinput.length;i++){
         let ascii_num = pinput[i].charCodeAt()
+       
         let sum = ascii_num + shiftinput
-        sum>= 65 && sum <=90 ? solved += String.fromCharCode(sum) : sum>90 ? solved+= String.fromCharCode(65+(sum & 91)) : solved += pinput[i]
+        if(sum>=65 && sum<=90){
+            solved += String.fromCharCode(sum)
+        }
+      else  if(sum>90) {
+            sum==(sum-65)%26
+            solved+= String.fromCharCode(sum)
+            
+        }
+        else
+        solved += pinput[i]
+       /* sum>= 65 && sum <=90 ? solved += String.fromCharCode(sum) : sum>90 ? solved+= String.fromCharCode((sum-65)%26) : solved += pinput[i]*/
     }
 
 einput.value = solved

@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Dancing+Script&family=Vujahday+Script&display=swap');
 body{
     background-color: lavenderblush;
+    
 }
 #container1{
     
     height: auto;
-    width:100%;
+    width:70%;
     border: 1px solid black;
     box-shadow:6px 5px 2px grey;
     border-radius:50px ;
-    margin-top:7em;
-    margin-left: 12em;
+    margin:7em auto;
+  
     justify-content: center;
     font-family: 'Dancing Script', cursive;
     text-align: center;
@@ -21,12 +22,13 @@ body{
 }
 #container2{
     height: auto;
-    width:100%;
+    width:70%;
     border: 1px solid black;
     box-shadow:6px 5px 2px grey;
     padding: 50px;
     border-radius:50px ;
-    margin: 7em;
+    
+    margin: 5em auto;
     justify-content: center;
     font-family: 'Vujahday Script', cursive;
     text-align: center;
